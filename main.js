@@ -10,3 +10,7 @@ focoBt.addEventListener('click', () => {
 curtoBt.addEventListener('click', () => {
     html.setAttribute('data-contexto', 'descanso-curto')
 })
+
+longoBt.addEventListener('click', () => {
+    html.setAttribute('data-contexto', 'descanso-longo')
+})
