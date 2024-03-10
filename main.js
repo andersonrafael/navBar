@@ -3,6 +3,7 @@ const focoBt = document.querySelector('.app__card-button--foco')
 const curtoBt = document.querySelector('.app__card-button--curto')
 const longoBt = document.querySelector('.app__card-button--longo')
 const banner = document.querySelector('.app__image')
+const titulo = document.querySelector('.app__title')
 
 focoBt.addEventListener('click', () => {
     //modo alternativo sem chamar a função alterarContexto
@@ -28,4 +29,25 @@ longoBt.addEventListener('click', () => {
 function alterarContexto(contexto) {
     html.setAttribute('data-contexto', contexto)
     banner.setAttribute('src', `/imagens/${contexto}.png`)
+    switch (contexto) {
+        case "foco":
+            titulo.innerHTML = `
+                Otimize suas Tarefas <br>
+                <strong class="app__title-strong">Hora de ir com tudo</strong>
+            `
+            break;
+        case "descanso-curto":
+            titulo.innerHTML = `
+                Que tao da uma respirada 
+                 <strong class="app__title-strong">Faça uma pausa.</strong>
+            `
+            break;
+        case "descanso-longo":
+            titulo.innerHTML = `
+                Faça uma pausa longa
+                <strong class="app__title-strong">Hora de dar um tempo e relaxar a cabeça.</strong>
+            `
+        default:
+            break;
+    }
 }
