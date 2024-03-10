@@ -5,6 +5,8 @@ const longoBt = document.querySelector('.app__card-button--longo')
 const banner = document.querySelector('.app__image')
 const titulo = document.querySelector('.app__title')
 const botoes = document.querySelectorAll('.app__card-button')
+const musicaInput = document.querySelector('#alternar-musica')
+const musica = new Audio('/sons/luna-rise-part-one.mp3')
 
 focoBt.addEventListener('click', () => {
     //modo alternativo sem chamar a função alterarContexto
@@ -52,7 +54,7 @@ function alterarContexto(contexto) {
         case "descanso-longo":
             titulo.innerHTML = `
                 Faça uma pausa longa
-                <strong class="app__title-strong">Hora de dar um tempo e relaxar a cabeça.</strong>
+                <strong class="app__title-strong">Hora de relaxar.</strong>
             `
         default:
             break;
